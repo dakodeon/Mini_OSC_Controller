@@ -10,14 +10,14 @@ The controller communicates with SuperCollider on a remote machine using the OSC
 
 ** File Structure:
 
-- | | [[file:/home/zob203/Programming/SuperCollider/20170829-Algorithmic_Composition_Project/Mini_OSC_Controller/README.org][README.org]] 
-- |D| [[file:/home/zob203/Programming/SuperCollider/20170829-Algorithmic_Composition_Project/Mini_OSC_Controller/python-files-RPi][python-files-RPi]] 
-  - | | [[file:/home/zob203/Programming/SuperCollider/20170829-Algorithmic_Composition_Project/Mini_OSC_Controller/python-files-RPi/controller.py][controller.py]] 
-- |D| [[file:/home/zob203/Programming/SuperCollider/20170829-Algorithmic_Composition_Project/Mini_OSC_Controller/sc-files][sc-files]] 
-  - | | [[file:/home/zob203/Programming/SuperCollider/20170829-Algorithmic_Composition_Project/Mini_OSC_Controller/sc-files/1.globals.scd][1.globals.scd]] 
-  - | | [[file:/home/zob203/Programming/SuperCollider/20170829-Algorithmic_Composition_Project/Mini_OSC_Controller/sc-files/2.synthdefs.scd][2.synthdefs.scd]] 
-  - | | [[file:/home/zob203/Programming/SuperCollider/20170829-Algorithmic_Composition_Project/Mini_OSC_Controller/sc-files/3.guis.scd][3.guis.scd]] 
-  - | | [[file:/home/zob203/Programming/SuperCollider/20170829-Algorithmic_Composition_Project/Mini_OSC_Controller/sc-files/4.osc_handling.scd][4.osc_handling.scd]] 
+- | | [[file:./README.org][README.org]] 
+- |D| [[file:./python-files-RPi][python-files-RPi]] 
+  - | | [[file:./python-files-RPi/controller.py][controller.py]] 
+- |D| [[file:./sc-files][sc-files]] 
+  - | | [[file:./sc-files/1.globals.scd][1.globals.scd]] 
+  - | | [[file:./sc-files/2.synthdefs.scd][2.synthdefs.scd]] 
+  - | | [[file:./sc-files/3.guis.scd][3.guis.scd]] 
+  - | | [[file:./sc-files/4.osc_handling.scd][4.osc_handling.scd]] 
 
 ** Components
 
