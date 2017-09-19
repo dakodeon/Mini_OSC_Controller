@@ -175,6 +175,8 @@ This file contains the OSC functions' definitions. The OSC functions listen to t
 
 ** TODO
 
+TODO list:
+
 - Automate the way synths are read, so that you can create synths in SC and then send an OSC message to python that generates the synth dictionary (tricky, because of the use of GUI and global variables)
 - Change the way the synths are stored in SC. Instead of an array use a dictionary.
 - Change how the synths' output is being switched. The current implementation is sloppy and error-prone.
