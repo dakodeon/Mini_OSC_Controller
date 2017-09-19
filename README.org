@@ -9,7 +9,6 @@ The controller is built with a minimalistic approach. You can control only one p
 The controller communicates with SuperCollider on a remote machine using the OSC protocol. At this point the communication uses an Ethernet cable, but it is possible to implement using WiFi.
 
 ** File Structure:
-#+BEGIN_FSTREE: /home/zob203/Programming/SuperCollider/20170829-Algorithmic_Composition_Project/Mini_OSC_Controller
 
 - | | [[file:/home/zob203/Programming/SuperCollider/20170829-Algorithmic_Composition_Project/Mini_OSC_Controller/README.org][README.org]] 
 - |D| [[file:/home/zob203/Programming/SuperCollider/20170829-Algorithmic_Composition_Project/Mini_OSC_Controller/python-files-RPi][python-files-RPi]] 
@@ -19,8 +18,6 @@ The controller communicates with SuperCollider on a remote machine using the OSC
   - | | [[file:/home/zob203/Programming/SuperCollider/20170829-Algorithmic_Composition_Project/Mini_OSC_Controller/sc-files/2.synthdefs.scd][2.synthdefs.scd]] 
   - | | [[file:/home/zob203/Programming/SuperCollider/20170829-Algorithmic_Composition_Project/Mini_OSC_Controller/sc-files/3.guis.scd][3.guis.scd]] 
   - | | [[file:/home/zob203/Programming/SuperCollider/20170829-Algorithmic_Composition_Project/Mini_OSC_Controller/sc-files/4.osc_handling.scd][4.osc_handling.scd]] 
-
-#+END_FSTREE
 
 ** Components
 
