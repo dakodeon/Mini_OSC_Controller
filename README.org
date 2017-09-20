@@ -182,3 +182,4 @@ TODO list:
 - Change how the synths' output is being switched. The current implementation is sloppy and error-prone.
 - Implement WiFi. Use previous work (SecretSchool etc)
 - Write code to enable sending to multiple SC instances in different machines
+- Update this ReadMe file with info about used libraries, classes, modules etc
