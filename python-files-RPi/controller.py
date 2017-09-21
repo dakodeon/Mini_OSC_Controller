@@ -1,7 +1,10 @@
 # Controller for the Algorithmic Composition project
 # Only one sensor is assumed to exist. See sensors2sound.py for handling multiple sensors.
 
-# NOTE: last test shows that safe values for the sensor are between 400 and 726. If no obstacle the sensor defaults at 408 (for some reason)
+# !!!!! READ THIS
+# Be careful to test the sensor before each use, and change the mapping  params to SC code! I dont know why, but each time the safe values are different (maybe due to the cheap sensor?).
+# Last test shows that safe values for the sensor are between 285 and 726. If no obstacle the sensor defaults at 297 (for some reason)
+#changes for testing purposes here!
 
 ####### SETUP ##########
 
