@@ -5,8 +5,16 @@ OSCdef(\monitor, {
 	| msg |
 	var str;
 	msg.postln;
-	str = msg[1] ++ "=>" ++ msg[2];
-	{~monitor.string_(str)}.defer;
+	if (msg[1] == \sensor, {
+		if (msg[2] == 1, {
+			{~sensor_stat.string_("Sensor ON").background_(Color.green)}.defer
+		}, {
+			{~sensor_stat.string_("Sensor OFF").background_(Color.gray(0.8))}.defer
+		})
+	}, {
+		str = msg[1] ++ "=>" ++ msg[2];
+		{~monitor.string_(str)}.defer;		
+	})
 }, '/monitor');
 
 OSCdef(\onoff, {

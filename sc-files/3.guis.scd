@@ -472,12 +472,12 @@ StaticText(~bpf_w, Rect(130, 90, 150, 15)).string_("mod frequency").align_(\cent
 StaticText(~bpf_w, Rect(130, 135, 150, 15)).string_("mod depth").align_(\center);
 
 // monitor
-~monitor_w = Window("Monitor", Rect(597, 314, 250, 70))
+~monitor_w = Window("Monitor", Rect(582, 314, 265, 70))
 .front.alwaysOnTop_(true);
 
 StaticText(~monitor_w, Rect(5, 5, 150, 15)).string_("synth and parameter:");
 ~monitor = StaticText(~monitor_w, Rect(5, 30, 150, 30))
 .string_("fm=>carr").align_(\center).background_(Color.white);
 
-~monitor_osc = StaticText(~monitor_w, Rect(160, 30, 100, 30)).string_("OSC OFF").align_(\center)
+~sensor_stat = StaticText(~monitor_w, Rect(160, 30, 100, 30)).string_("Sensor OFF").align_(\center).background_(Color.gray(0.8))
 )
