@@ -43,7 +43,7 @@ OSCdef(\change_params, {
 	var val, cmd, v_name;
 	msg.postln;
 	v_name = "~" ++ msg[1] ++ "_" ++ msg[2];
-	val = msg[3].explin(400, 726, 0, 1);
+	val = msg[3].explin(285, 726, 0, 1);
 	cmd =  v_name ++ ".valueAction_(" ++ val ++ ")";
 	{cmd.interpret}.defer;
 }, '/sensor');

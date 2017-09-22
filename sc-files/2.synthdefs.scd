@@ -26,6 +26,7 @@ SynthDef(\comb, {
 	var sig;
 	sig = In.ar(in, 2);
 	x = CombC.ar(sig, 1, time.lag(g), dec.lag(g), amp.lag(g));
+	x = Limiter.ar(x, 0.8);
 	Out.ar(out, x);
 }).add;
 
@@ -35,6 +36,7 @@ SynthDef(\bpf, {
 	var sig;
 	sig = In.ar(in, 2);
 	x = BPF.ar(sig, SinOsc.kr(mfreq.lag(g)).range((freq - mdp).lag(g), (freq + mdp).lag(g)), rq.lag(g), (1/rq.sqrt).lag(g) );
+	x = Limiter.ar(x, 0.8);
 	Out.ar(out, x);
 }).add;
 )
