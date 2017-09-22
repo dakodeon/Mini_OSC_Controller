@@ -120,6 +120,11 @@ def sensor_switch(channel):
     global sensor_on
     sensor_on = not(sensor_on)
 
+    msg_addr = "/monitor"
+    msg = ["sensor", sensor_on]
+    print msg
+    send_osc(msg_addr, msg)
+    
 # Assign callback functions to respective pins
 GPIO.add_event_detect(synth_btn, GPIO.RISING, callback=change_synth, bouncetime=200)
 GPIO.add_event_detect(param_btn, GPIO.RISING, callback=change_param, bouncetime=200)
