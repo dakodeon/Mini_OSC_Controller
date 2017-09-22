@@ -8,7 +8,7 @@ The controller is built with a minimalistic approach. You can control only one p
 
 The controller communicates with SuperCollider on a remote machine using the OSC protocol. At this point the communication uses an Ethernet cable, but it is possible to implement using WiFi.
 
-** File Structure:
+*** File Structure:
 
 - | | [[file:./README.org][README.org]] 
 - |D| [[file:./python-files-RPi][python-files-RPi]] 
@@ -100,11 +100,11 @@ The OSC message concerning the sensor is sent from the main loop, after reading 
 
 =(/sensor, fm, carr, 300)=
 
-The OSC messages concerning switching synths on or off and changing synths' output are sent from the respective callback functions when an interrupt occurs. The message about monitoring is sent either from the change_synth function or the change_param function and consists of the name of the synth and the parameter to be changed.
+The OSC messages concerning switching synths on or off and changing synths' output are sent from the respective callback functions when an interrupt occurs. The message about monitoring synths and parameters is sent either from the change_synth function or the change_param function and consists of the name of the synth and the parameter to be changed. The OSC message about monitoring the sensor's state is sent from the sensor_switch function.
 
 *** SuperCollider
 
-In SuperCollider the main task is, obviously, to create sound. Some GUI windows are also created, containing the controls for each synth. They are used both for visualizing the changes made to the synths, and also controlling the synths, bypassing the controller.
+In SuperCollider the main task is to create sound. Some GUI windows are also created, containing the controls for each synth. They are used both for visualizing the changes made to the synths, and also controlling the synths, bypassing the controller.
 
 The SuperCollider script is divided in 4 different files, so that it can be easily read and revised:
 - =1.globals.scd=: Initialization code, global variables
