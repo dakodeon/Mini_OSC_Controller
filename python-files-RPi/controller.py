@@ -121,7 +121,7 @@ def sensor_switch(channel):
     sensor_on = not(sensor_on)
 
     msg_addr = "/monitor"
-    msg = ["sensor", sensor_on]
+    msg = ["sensor", int(sensor_on)]
     print msg
     send_osc(msg_addr, msg)
     
