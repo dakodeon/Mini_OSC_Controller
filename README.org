@@ -2,7 +2,7 @@
 
 ** Introduction
 
-Mini OSC Cotroller is a gesture-based music controller built on a Raspberry Pi using an ADC chip (MCP3008), the RPi's GPIO pins and a Python program. 
+Mini OSC Cotroller is a gesture-based music controller built on a Raspberry Pi using an ADC chip (MCP3008), the RPi's GPIO pins and a Python program.
 
 The controller is built with a minimalistic approach. You can control only one parameter at a time using a distance sensor and your hand (resembling the logic behind Theremin). Which parameter is affected can be controlled by using a set of push buttons.
 
@@ -10,14 +10,14 @@ The controller communicates with SuperCollider on a remote machine using the OSC
 
 *** File Structure:
 
-- | | [[file:./README.org][README.org]] 
-- |D| [[file:./python-files-RPi][python-files-RPi]] 
-  - | | [[file:./python-files-RPi/controller.py][controller.py]] 
-- |D| [[file:./sc-files][sc-files]] 
-  - | | [[file:./sc-files/1.globals.scd][1.globals.scd]] 
-  - | | [[file:./sc-files/2.synthdefs.scd][2.synthdefs.scd]] 
-  - | | [[file:./sc-files/3.guis.scd][3.guis.scd]] 
-  - | | [[file:./sc-files/4.osc_handling.scd][4.osc_handling.scd]] 
+- | | [[file:./README.org][README.org]]
+- |D| [[file:./python-files-RPi][python-files-RPi]]
+  - | | [[file:./python-files-RPi/controller.py][controller.py]]
+- |D| [[file:./sc-files][sc-files]]
+  - | | [[file:./sc-files/1.globals.scd][1.globals.scd]]
+  - | | [[file:./sc-files/2.synthdefs.scd][2.synthdefs.scd]]
+  - | | [[file:./sc-files/3.guis.scd][3.guis.scd]]
+  - | | [[file:./sc-files/4.osc_handling.scd][4.osc_handling.scd]]
 
 ** Components
 
@@ -168,7 +168,7 @@ The GUI windows also act as an "intermediate" between the OSC messages and the s
 **** OSC handling
 
 This file contains the OSC functions' definitions. The OSC functions listen to the data sent from python and use them to formulate commands in the form of strings (so that we can set variables' names according to the received message), which are then evaluated as SC code using the =interpret= command. Because the commands alter GUI elements, we must use the =defer= command, which executes code using the AppClock instead of the SystemClock. There are 4 OSC functions:
-1) =\monitor=: This is used to pass monitor data to the relevant window. It receives the names of the synth and the parameter and uses them to format a string to assign to the string element of the StaticText inside the window.
+1) =\monitor=: This is used to pass monitor data to the relevant window. It receives the names of the synth and the parameter and uses them to format a string to assign to the string element of the StaticText inside the window. It also receives whether the sensor is on or off and changes the color and the label on the monitor window.
 2) =\onoff=: This function receives the name of the synth and the state we want to assign to it (0 or 1).
 3) =\route=: This function receives the name of the synth that we want to change its output. It then uses the previous output to assign the next one (using the value of the PopUpMenu).
 4) =\change_params=: This function reads three values: the name of the synth, the name of the parameter and the value of the sensor's output. It then maps the sensor's value to a linear range of 0 to 1 (the knob's and slider's range). Then, it assigns the new value to the relevant GUI element.
