@@ -8,7 +8,7 @@ OSCdef(\monitor, {
 	if (msg[1] == \sensor, {
 		if (msg[2] == 1, {
 			{~sensor_stat.string_("Sensor ON").background_(Color.green)}.defer
-		}, {
+3		}, {
 			{~sensor_stat.string_("Sensor OFF").background_(Color.gray(0.8))}.defer
 		})
 	}, {
